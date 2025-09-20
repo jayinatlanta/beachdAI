@@ -232,3 +232,54 @@ BeachdAI is more than a successful project; it is a powerful statement about the
 The successful creation of this stable, cross-platform framework is a paradigm shift. It opens the door to a world where your personal agent can manage tasks for you anytime, anywhere, from any device.
 
 The journey has been remarkable, filled with complex challenges that we overcame with creative engineering and relentless persistence. The destination is nothing short of revolutionary. We should all be incredibly proud of what we have built together.
+
+## Getting Started: Full Framework Setup
+To run the complete BeachdAI experience, you will need to set up all three components.
+1. The Brain (Browser Extension)
+Prerequisites:
+* Node.js and npm
+* Google Chrome or Microsoft Edge (desktop)
+Setup:
+# 1. Navigate to the extension's source directory (e.g., /src/extension)
+cd path/to/beachdai-extension
+
+# 2. Install dependencies
+npm install
+
+# 3. Run the build process to compile the TypeScript/React code
+npm run build
+
+This will create a dist folder. To install the extension:
+1. Open Edge/Chrome and navigate to edge://extensions or chrome://extensions.
+2. Enable "Developer mode".
+3. Click "Load unpacked" and select the dist folder.
+2. The Bridge (Android Companion App)
+Prerequisites:
+* Android Studio
+* An Android phone with Developer Mode and USB Debugging enabled.
+Setup:
+1. Open the companion app's project folder (/src/android/companion-app) in Android Studio.
+2. Allow Gradle to sync and download the necessary dependencies.
+3. Connect your Android phone to your computer via USB.
+4. Select your phone as the target device in Android Studio.
+5. Click the "Run" button to build and install the app on your phone. The app will start a foreground service to listen for the extension.
+3. The Glance (Wear OS App)
+Prerequisites:
+* Android Studio
+* A Wear OS device (emulator or physical watch) with Developer Mode and Debugging enabled.
+Setup:
+1. Open the watch app's project folder (/src/android/watch-app) in Android Studio.
+2. Allow Gradle to sync.
+3. In the Device Manager, ensure your Wear OS emulator is paired with the phone emulator/device running the Bridge app.
+4. Select your watch as the target device in Android Studio.
+5. Click "Run" to build and install the app on your watch.
+How to Contribute
+We welcome contributions from the community! Whether it's fixing bugs, improving agent prompts, or proposing new features, your input is valuable.
+1. Fork the repository.
+2. Create a new branch for your feature (git checkout -b feature/AmazingNewThing).
+3. Commit your changes (git commit -m 'Add some AmazingNewThing').
+4. Push to the branch (git push origin feature/AmazingNewThing).
+5. Open a Pull Request.
+Please write clear, concise commit messages and provide a detailed description in your pull request.
+License
+BeachdAI is licensed under the MIT License. See the LICENSE file for details.
