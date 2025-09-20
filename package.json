@@ -1,0 +1,30 @@
+{
+  "name": "beachdai-extension",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.0.269",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "copy-webpack-plugin": "^13.0.1",
+    "fs-extra": "^11.2.0",
+    "@types/crypto-js": "^4.2.2",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.1",
+    "crypto-js": "^4.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}

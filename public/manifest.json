@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "BeachdAI: Autonomy with DeliberAIte",
+  "version": "6.2",
+  "description": "A multi-agent autonomous web tool for desktop, mobile, and wearable.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel",
+    "tabs",
+    "geolocation",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "http://localhost:11434/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "sidebar.html"
+  },
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/models/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
+
